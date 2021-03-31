@@ -1,5 +1,6 @@
 package ferium.anejvaupotic.kcal_counter
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,9 +16,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_reg).setOnClickListener {
-            //intent -> activity register
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
-
-
 }

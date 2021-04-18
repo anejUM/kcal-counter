@@ -7,49 +7,65 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/inp_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="77dp" />
+        android:text="FirstName"
+        app:layout_constraintBottom_toTopOf="@+id/inp_last_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="100dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/inp_last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="175dp" />
+        android:text="LastName"
+        app:layout_constraintBottom_toTopOf="@+id/inp_email"
+        app:layout_constraintTop_toBottomOf="@+id/inp_first_name"
+        tools:layout_editor_absoluteX="100dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/inp_psw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="267dp" />
+        app:layout_constraintBottom_toTopOf="@+id/inp_psw_sec"
+        app:layout_constraintTop_toBottomOf="@+id/inp_email"
+        tools:layout_editor_absoluteX="100dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/inp_psw_sec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="352dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_conf"
+        app:layout_constraintTop_toBottomOf="@+id/inp_psw"
+        tools:layout_editor_absoluteX="100dp" />
 
     <Button
         android:id="@+id/btn_conf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="500dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inp_psw_sec"
+        tools:layout_editor_absoluteX="159dp" />
+
+    <EditText
+        android:id="@+id/inp_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/inp_psw"
+        app:layout_constraintTop_toBottomOf="@+id/inp_last_name"
+        tools:layout_editor_absoluteX="100dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
